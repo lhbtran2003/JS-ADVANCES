@@ -64,7 +64,8 @@
 // let a = 100
 // console.log(search(arr, a))
 
-// // Bài 8
+// Bài 8
+// đây là cách làm sai
 // function Insert(arr1,arr2,num) {
 //     let i = arr1.findIndex((e) => e = num ) //i là vị trí
 //     let a = arr1.slice(0,i)
@@ -75,16 +76,47 @@
 // let sub = [4,5,6]
 // let num = 3
 // Insert
+// function Insert(arr1,arr2,num) {
+//     arr1.splice(num,0,...arr2)
+//     return arr1 
+// }
+// Insert()
 
-// Bài 9
-let users = [
-    { id: 1, name: 'Alice', hobbies: ['Reading', 'Drawing'] },
-    { id: 2, name: 'Bob', hobbies: ['Gaming', 'Cooking'] },
+// // Bài 9
+// let users = [
+//     { id: 1, name: 'Alice', hobbies: ['Reading', 'Drawing'] },
+//     { id: 2, name: 'Bob', hobbies: ['Gaming', 'Cooking'] },
+// ]
+
+// Bài 11
+const product = [
+    {id: 1, name: "sp1", price: 100, quantity: 100},
+    {id: 2, name: "sp2", price: 90, quantity: 100},
+    {id: 3, name: "sp3", price: 120, quantity: 100},
 ]
 
-let a = []
-a.push(users.forEach((e) => {
-    e.hobbies
-})
-)
-console.log(a)
+const cart = [] //lưu trữ sp và số lượng mua cartitem(pro: sản phẩm, quantity: số lượng mua )
+cart = [
+    {pro: {id: 1, name: "sp1", price: 100, quantity: 100}, quantity: 100},
+    {pro: {id: 2, name: "sp2", price: 100, quantity: 100}, quantity: 2},
+]
+
+ // Thay đổi só lượng có 3 tham số 
+function changeQuantity(proId, newQuantity, products) {
+    let oldQuantity = products.quantity
+    let index = indexOfProductInCart(proId)
+    if (index != -1) {
+        cart[item].quantity = newQuantity
+        //tìm thấy và thay đổi số lượng 
+        let indexPro = pro
+
+    }
+
+}
+
+ //tạo hàm lấy ra index của phần tử cần chỉnh sửa số lượng
+ function indexOfProductInCart(proId) {
+    return cart.findIndex((cartItem) => cartItem.pro.id == proId)
+ }
+
+ //
