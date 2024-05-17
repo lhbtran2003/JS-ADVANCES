@@ -1,0 +1,20 @@
+body {
+    text-align: center;
+}
+main {
+    font-weight: 500;
+    
+    
+}
+#a {
+   display: flex;
+   justify-content: center;
+   align-content: center;
+}
+
+#a p {
+    margin-left: 20px;
+}
+#btn {
+    margin-top: 20px;
+}

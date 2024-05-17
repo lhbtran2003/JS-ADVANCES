@@ -8,16 +8,12 @@ class Contact {
     }
 
 }
-function addContact(obj) {
-        phoneBooks.push(obj)
+function addContact(name,phone,email) {
+        const newContact = new Contact(name,phone,email)
+        phoneBooks = [...phoneBooks,newContact]
 }
 function displayContact(arr) {
-    console.log(arr)
+    phoneBooks.forEach(e => console.log)
 }
 
-let ct1 = new Contact("BTRAN",12345,"abc@gmail.com")
-let ct2 = new Contact("Vtu", 7654, "abc@gmail.com")
-addContact(ct1)
-addContact(ct2)
-displayContact(phoneBooks)
 
