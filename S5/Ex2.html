@@ -1,25 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quizz</title>
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="Ex2.css">
-
 </head>
 <body>
-    <p>Thời gian: <span id="time"></span></p>
-    <p>Câu: <span id="numberQuestion"></span></p>
-    <p id="question" renderQuestion()></p>
-    <form action="">
-        <ul>
-            <li><input type="radio">A. 27/4</li>
-            <li><input type="radio">A. 27/4</li>
-            <li><input type="radio">A. 27/4</li>
-            <li><input type="radio">A. 27/4</li>
-            <li><input type="radio">A. 27/4</li>
-        </ul>
-        <button Answer()>Answer</button>
-    </form>
+    <div class="container">
+        <div id="quiz-container">
+            <div id="header">
+                <span>Thời gian: <span id="time">15</span></span>
+                <span> Câu: <span id="question-number">1</span>/10</span>
+            </div>
+            <div id="question-container">
+                <p id="question">Ngày giải phóng miền Nam là ngày nào sau đây:</p>
+                <div class="options">
+                    <label><input type="radio" name="answer" value="A"> A. 27/4</label>
+                    <label><input type="radio" name="answer" value="B"> B. 28/4</label>
+                    <label><input type="radio" name="answer" value="C"> C. 29/4</label>
+                    <label><input type="radio" name="answer" value="D"> D. 30/4</label>
+                </div>
+                <button id="next-btn" onclick="nextQuestion()">Answer</button>
+            </div>
+        </div>
+        <div id="result-container" style="display: none;">
+            <h2 id="result"></h2>
+            <button onclick="restartQuiz()">Chơi lại</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
