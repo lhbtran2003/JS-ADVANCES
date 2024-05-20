@@ -3,7 +3,7 @@ let charArray: string[] = str.split("");
 let newStr: string = "";
 
 charArray.forEach((e: string) => {
-    if(!newStr.includes(e)) {
+    if(!newStr.includes(e)) {//INCLUDES ko nhận arrow function
       newStr+=e;
     }
 });
