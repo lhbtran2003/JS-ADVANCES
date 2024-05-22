@@ -34,15 +34,21 @@ enum color {
 console.log(color.green)
 
 // NEVER: function: ko bao giờ xảy ra
-
+// ko bao giờ nhận đc giá trị trả về
 // lỗi javascript
-function  error(message: string) : never {
+function  error(message: string) : never {  // nếu ko là never thì tự động trả về kiểu any
     throw new Error(message);
+    return // sẽ bị lỗi ở đây
 }
 
 // vòng lặp vô hạn
-function infiniteLong(): never {
+function infiniteLong(): never {// tác dụng của never là ép kiểu data =))))
     while(true) {
         console.log("há há há")
     }
 }
+
+// UNKNOW
+let unknowVariable: unknown = 1;
+unknowVariable = "abc";
+console.log(unknowVariable.length) //ko có kiểu data cụ thể, nên length ko xác định đc
