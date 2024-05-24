@@ -36,3 +36,25 @@ const editTodo = (id:number, status:true):void=>{//status được gán giá tr�
         } 
      }
 }
+
+// Thêm todo mới
+const addTodoId = (id:number):number=>{
+    let max = 0
+    todoList.find(e => {
+        if(e.id > max) {
+            max = e.id
+        }
+    })
+    return max+1;
+}
+const addTodo = ():void=>{
+    let input = document.querySelector('input') as HTMLInputElement
+    let newTodo:Todo = {
+        id: addTodo(),
+        title: input.value,
+        isCompleted: false 
+    }
+    todoList = [...todoList,newTodo]
+    printInfo()
+    input.value = ""
+}
