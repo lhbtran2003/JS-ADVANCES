@@ -32,3 +32,5 @@ class Manager extends Employee {
         console.log(`So luong thanh vien trong team: ${this.teamSize}`);
     }
 }
+const manager:Manager = new Manager("Tran","TNHH 1 minh t","123-456",1)
+console.log(manager)
