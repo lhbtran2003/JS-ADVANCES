@@ -18,7 +18,7 @@ class Student extends Person {
       this.id = _id;
     }
     //ghi de
-    override displayInfo(): void {
+    displayInfo(): void {
       super.displayInfo();
       console.log(`Id: ${this.id}`);
     }
