@@ -1,5 +1,5 @@
 interface Geometry {
-    calculateArea(): number;
+    calculateArea: () => number;
     calculatePerimeter(): number;
 }
 
@@ -11,11 +11,11 @@ class Circle implements Geometry {
         this.radius = _radius
     }
     
-    calculateArea():number {
+    calculateArea = () => { //ghi như này cũng đc
         return Math.PI * this.radius * this.radius;
     }
 
-    calculatePerimeter(): number {
+    calculatePerimeter(): number { //hoặc như này cũng ok
         return 2 * Math.PI * this.radius;
     }
 }

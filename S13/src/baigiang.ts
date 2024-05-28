@@ -40,11 +40,11 @@ abstract class Animals {
         this.sex = _sex;
         this.color = _color;
     }
-    getInfor(){
+    getInfor() {
         return `Animal [specie: ${this.species} | sex: ${this.sex} | color: ${this.color}]`
     }
     // Các phương thức trừu tượng
-    abstract makeSound: ()=>string;
+    abstract makeSound(): string;
 }
 
 class Dog extends Animals {

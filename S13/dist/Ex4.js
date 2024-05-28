@@ -2,10 +2,10 @@
 // Định nghĩa lớp Circle
 class Circle {
     constructor(_radius) {
+        this.calculateArea = () => {
+            return Math.PI * this.radius * this.radius;
+        };
         this.radius = _radius;
-    }
-    calculateArea() {
-        return Math.PI * this.radius * this.radius;
     }
     calculatePerimeter() {
         return 2 * Math.PI * this.radius;
