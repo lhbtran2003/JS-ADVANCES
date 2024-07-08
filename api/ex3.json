@@ -1,0 +1,31 @@
+[
+    {
+  "id" : 1,
+  "title" : "cách học reactjs hiệu quả",
+  "content" : "đọc tài liệu và làm nhiều bài tập",
+  "thumbnail" : "muahahaha",
+  "create at" : "25/03/2024",
+  "create by" : "Bảo Trân dưỡng thê",
+  "user-id" : 1,
+  "comment" : [
+    {
+        "id" : 1,
+        "content": "bài viết rất ý nghĩa",
+        "create_at" : "20/03/2025",
+        "user_id" : 2
+    },
+    {
+        "id" : 2,
+        "content": "bài viết rất ý nghĩa",
+        "create_at" : "20/03/2025",
+        "user_id" : 4
+    },
+    {
+        "id" : 3,
+        "content": "bài viết rất ý nghĩa",
+        "create_at" : "20/03/2025",
+        "user_id" : 6
+    }
+  ] 
+}
+]
